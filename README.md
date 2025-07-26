@@ -4,6 +4,8 @@
 
 DeAIfy is a Simple, Easy to Setup Blocklist for `uBlock Origin` and `Brave Browser` to block common `AI Websites` that may or may not be harmful.
 
+---
+
 ## Key Features :
 
 - Easy Setup ✅
