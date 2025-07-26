@@ -1,2 +1,245 @@
-# DeAIfy
-A Custom Script made to block common AI websites.
+<p align="center">
+  <img src="https://github.com/Chill-Astro/DeAIfy/blob/main/DeAIfy.png" width="128px" height="128px" alt="Anti-bot Logo">
+</p>
+
+DeAIfy is a Simple, Easy to Setup Blocklist for `uBlock Origin` and `Brave Browser` to block common `AI Websites` that may or may not be harmful.
+
+## Key Features :
+
+- Easy Setup ✅
+- Works on ABP based Ad-Blockers such as uBlock Origin and Brave Browser. ✅
+
+---
+
+## Usage :
+
+DeAIfy comes in two flavours : `EXTREME` and `LITE`.
+ 
+Copy the given custom filter list and paste it into the `My Filters` Tab and Enable it.
+
+- DeAIfy - LITE [ Blocks both Harmful AI Websites ONLY ] :
+
+    ! DeAIfy - LITE by Chill-Astro Software.
+    ! This filter aims to block a broader range of AI websites, including those with potential for harmful applications.
+    ! It is NOT exhaustive and requires ongoing review and manual additions/removals based on your specific definition of "harmful AI" and new emerging threats.
+
+    ! --- Deepfake & AI Image Manipulation (known for misuse) ---
+    ||deepnude.com^$document
+    ||thispersondoesnotexist.com^$document
+    ||synthesys.io^$document
+    ||vidyo.ai^$document
+    ||deepmotion.com^$document
+    ||fliki.ai^$document
+    ||kaiber.ai^$document
+    ||runwayml.com^$document ! (already listed, but also relevant here)
+    ||deepware.ai^$document ! (some deepfake detection sites might also host deepfakes)
+
+    ! --- AI Voice Cloning / Text-to-Speech (potential for scams/impersonation) ---
+    ||lovo.ai^$document
+    ||respeecher.com^$document
+    ||wellsaidlabs.com^$document
+    ||murf.ai^$document
+    ||voice.ai^$document
+    ||resemble.ai^$document
+    ||krisp.ai^$document ! (AI noise cancellation, can be used to facilitate clearer scam calls)
+
+    ! --- AI Code Generators (potential for malicious code generation) ---
+    ||github.com/features/copilot/^$document
+    ||replit.com/ai^$document
+    ||tabnine.com^$document
+
+    ! --- AI-powered Surveillance & Monitoring Tools (privacy concerns) ---
+    ! Note: Many of these are enterprise solutions, blocking public-facing sites might be less impactful.
+    ||clearview.ai^$document
+    ||palantir.com^$document
+    ||axon.com^$document ! (Axon Enterprise, makers of Taser, also developing AI for law enforcement)
+    ||cradlepoint.com^$document
+    ||veritone.com^$document
+    ||ntechlab.com^$document
+    ||facephi.com^$document
+
+    ! --- AI Scam/Phishing Related (general purpose, if you want to be extremely cautious) ---
+    ! These are difficult to block directly as they are often hosted on compromised sites or appear briefly.
+    ! Blocking general AI content generation might indirectly help, but dedicated cybersecurity is better here.
+    ! You might consider blocking known scam reporting sites to avoid accidentally landing on them if they link to actual scams.
+    ! No specific domains are listed here as "scam AI websites" are highly ephemeral.
+
+    ! --- AI-driven Content Moderation/Censorship Tools (if you oppose their use or specific companies) ---
+    ! (These are often B2B services, so direct website blocking might not impact end-user experience significantly)
+    ||activefence.com^$document
+    ||cogito.com^$document
+    ||pureweb.com^$document
+
+    ! --- Specific AI Directories/Marketplaces known for promoting controversial tools ---
+    ! (These are less about the AI itself and more about the aggregation)
+    ! Adding a few more general AI directories if you want to limit discovery
+    ||aitooldirectory.com^$document
+    ||aifuturetools.com^$document
+    ||aixploria.com^$document
+    ||therundown.ai^$document
+    ||ainews.com^$document
+
+    ! --- Websites and Platforms for AI-Generated Harmful Content (e.g., non-consensual deepfakes, hate speech) ---
+    ! This is extremely hard to filter by domain alone, as such content often appears on large social media platforms or
+    ! obscure corners of the internet. Dedicated deepfake detection tools or reporting mechanisms are more effective.
+    ! Examples below are very general and often not actual direct hosts of illegal content.
+    ! Specific subreddits or image boards often host such content, but blocking entire platforms is too broad.
+    ! If a specific known site is repeatedly abused, you can add it.
+    ! Example: If a specific image board is frequently linked to abusive AI content:
+    ! ||4chan.org/pol/^$document (This would block the /pol/ board on 4chan, but 4chan hosts many boards)
+    ! Use with extreme caution and only if you know exactly what you are blocking and why.
+    ! It's generally better to block specific *elements* on such sites if they are the source of the problem.
+
+    ! --- Experimental or Research AI Websites with high-risk potential (e.g., autonomous agents, if accessible to public) ---
+    ! These are often university or research lab sites, so general blocking is not advisable.
+    ! Only block if a specific project or publicly accessible demo is deemed harmful.
+
+- DeAIfy - EXTREME [ Blocks both Harmful and Useful AI Websites ] :
+
+    ! DeAIfy - EXTREME by Chill-Astro Software.
+    ! This filter aims to block a broader range of AI websites, including those with potential for harmful applications.
+    ! It is NOT exhaustive and requires ongoing review and manual additions/removals based on your specific definition of "harmful AI" and new emerging threats.
+
+    ! --- Major AI Chatbots/Generators ---
+    ||openai.com^$document
+    ||chatgpt.com^$document
+    ||gemini.google.com^$document
+    ||bard.google.com^$document
+    ||claude.ai^$document
+    ||perplexity.ai^$document
+    ||character.ai^$document
+    ||midjourney.com^$document
+    ||stability.ai^$document
+    ||stable-diffusion-art.com^$document
+    ||dalle2.com^$document
+    ||adobe.com/sensei/^$document
+    ||writesonic.com^$document
+    ||jasper.ai^$document
+    ||copy.ai^$document
+    ||rytr.com^$document
+    ||notion.so/ai/^$document
+    ||quillbot.com^$document
+    ||grammarly.com^$document
+    ||deepl.com^$document
+    ||sora.ai^$document
+    ||canva.com/ai-image-generator/^$document
+    ||synthesia.io^$document
+    ||descript.com^$document
+    ||heygen.com^$document
+    ||pictory.ai^$document
+    ||elevenlabs.io^$document
+    ||play.ht^$document
+    ||lumen5.com^$document
+    ||runwayml.com^$document
+    ||tome.app^$document
+    ||beautiful.ai^$document
+    ||autogen.com^$document
+    ||futurepedia.io^$document
+    ||aitoolsdirectory.com^$document
+    ||futuretools.io^$document
+    ||aixploria.com^$document
+
+    ! --- Deepfake & AI Image Manipulation (known for misuse) ---
+    ||deepnude.com^$document
+    ||thispersondoesnotexist.com^$document
+    ||synthesys.io^$document
+    ||vidyo.ai^$document
+    ||deepmotion.com^$document
+    ||fliki.ai^$document
+    ||kaiber.ai^$document
+    ||runwayml.com^$document ! (already listed, but also relevant here)
+    ||deepware.ai^$document ! (some deepfake detection sites might also host deepfakes)
+
+    ! --- AI Voice Cloning / Text-to-Speech (potential for scams/impersonation) ---
+    ||lovo.ai^$document
+    ||respeecher.com^$document
+    ||wellsaidlabs.com^$document
+    ||murf.ai^$document
+    ||voice.ai^$document
+    ||resemble.ai^$document
+    ||krisp.ai^$document ! (AI noise cancellation, can be used to facilitate clearer scam calls)
+
+    ! --- AI Code Generators (potential for malicious code generation) ---
+    ||github.com/features/copilot/^$document
+    ||replit.com/ai^$document
+    ||tabnine.com^$document
+
+    ! --- AI-powered Surveillance & Monitoring Tools (privacy concerns) ---
+    ! Note: Many of these are enterprise solutions, blocking public-facing sites might be less impactful.
+    ||clearview.ai^$document
+    ||palantir.com^$document
+    ||axon.com^$document ! (Axon Enterprise, makers of Taser, also developing AI for law enforcement)
+    ||cradlepoint.com^$document
+    ||veritone.com^$document
+    ||ntechlab.com^$document
+    ||facephi.com^$document
+
+    ! --- AI Scam/Phishing Related (general purpose, if you want to be extremely cautious) ---
+    ! These are difficult to block directly as they are often hosted on compromised sites or appear briefly.
+    ! Blocking general AI content generation might indirectly help, but dedicated cybersecurity is better here.
+    ! You might consider blocking known scam reporting sites to avoid accidentally landing on them if they link to actual scams.
+    ! No specific domains are listed here as "scam AI websites" are highly ephemeral.
+
+    ! --- AI-driven Content Moderation/Censorship Tools (if you oppose their use or specific companies) ---
+    ! (These are often B2B services, so direct website blocking might not impact end-user experience significantly)
+    ||activefence.com^$document
+    ||cogito.com^$document
+    ||pureweb.com^$document
+
+    ! --- Specific AI Directories/Marketplaces known for promoting controversial tools ---
+    ! (These are less about the AI itself and more about the aggregation)
+    ! Adding a few more general AI directories if you want to limit discovery
+    ||aitooldirectory.com^$document
+    ||aifuturetools.com^$document
+    ||aixploria.com^$document
+    ||therundown.ai^$document
+    ||ainews.com^$document
+
+    ! --- Websites and Platforms for AI-Generated Harmful Content (e.g., non-consensual deepfakes, hate speech) ---
+    ! This is extremely hard to filter by domain alone, as such content often appears on large social media platforms or
+    ! obscure corners of the internet. Dedicated deepfake detection tools or reporting mechanisms are more effective.
+    ! Examples below are very general and often not actual direct hosts of illegal content.
+    ! Specific subreddits or image boards often host such content, but blocking entire platforms is too broad.
+    ! If a specific known site is repeatedly abused, you can add it.
+    ! Example: If a specific image board is frequently linked to abusive AI content:
+    ! ||4chan.org/pol/^$document (This would block the /pol/ board on 4chan, but 4chan hosts many boards)
+    ! Use with extreme caution and only if you know exactly what you are blocking and why.
+    ! It's generally better to block specific *elements* on such sites if they are the source of the problem.
+
+    ! --- Experimental or Research AI Websites with high-risk potential (e.g., autonomous agents, if accessible to public) ---
+    ! These are often university or research lab sites, so general blocking is not advisable.
+    ! Only block if a specific project or publicly accessible demo is deemed harmful.
+
+
+---
+
+## Shortcomings :   
+
+This is extremely hard to filter by domain alone, as such content often appears on large social media platforms or
+obscure corners of the internet. Dedicated deepfake detection tools or reporting mechanisms are more effective.
+Examples below are very general and often not actual direct hosts of illegal content.
+Specific subreddits or image boards often host such content, but blocking entire platforms is too broad.
+If a specific known site is repeatedly abused, you can add it.
+Example: If a specific image board is frequently linked to abusive AI content:
+||4chan.org/pol/^$document (This would block the /pol/ board on 4chan, but 4chan hosts many boards)
+Use with extreme caution and only if you know exactly what you are blocking and why.
+It's generally better to block specific *elements* on such sites if they are the source of the problem.
+
+---
+
+## ⚠️ IMPORTANT NOTICE ⚠️
+
+Please be aware: There are fraudulent repositories on GitHub that are cloning this project's name and using AI-generated readmes, but they contain **completely random and unrelated files in each release**. These are NOT official versions of this project.
+
+**ALWAYS ensure you are downloading or cloning this project ONLY from its official and legitimate source:**
+`https://github.com/Chill-Astro/DeAIfy`
+
+I am trying my best to report these people.
+
+---
+
+## Note from Developer :
+
+Appreciate my effort? Why not leave a Star ⭐ ! Also if forked, please credit me for my effort and thanks if you do! :)
+
+---
